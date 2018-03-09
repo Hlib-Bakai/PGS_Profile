@@ -45,6 +45,7 @@ namespace PGS_Profile
             {
                 buttonNext.Click -= buttonExit_Click;
                 buttonNext.Click += buttonNext_Click;
+                buttonNext.Text = "Next";
             }
 
             currentIdx = newIdx;
@@ -52,18 +53,17 @@ namespace PGS_Profile
             buttonBack.Enabled = currentIdx == 0 ? false : true;
 
             panel2.Visible = currentIdx == fields.Count();
-            if (panel2.Visible)
+            if (panel2.Visible) //If new is result page
             {
-                fillResult();
+                FillResult();
                 buttonNext.Text = "Exit";
                 buttonNext.Click -= buttonNext_Click;
                 buttonNext.Click += buttonExit_Click;
 
                 buttonNext.Focus();
             }
-            else
+            else //If not a result
             {
-                buttonNext.Text = "Next";
                 labelCurrent.Text = fields[currentIdx];
                 textBoxVal.Text = values[currentIdx];
                 labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Bold);
@@ -72,7 +72,7 @@ namespace PGS_Profile
             }
         }
 
-        private void fillResult()
+        private void FillResult()
         {
             textBoxResult.Clear();
 
