@@ -37,13 +37,13 @@ namespace PGS_Profile
             labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Bold);
         }
 
-        private void ChangeCurrent(bool toBack = false)  //Default - change to next
+        private void ChangeCurrent(int newIdx) 
         {
             values[currentIdx] = textBoxVal.Text;
             checkers[currentIdx].Checked = (textBoxVal.Text != String.Empty);
             labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Regular);
 
-            currentIdx = toBack ? currentIdx - 1 : currentIdx + 1;
+            currentIdx = newIdx;
             labelCurrent.Text = fields[currentIdx];
             textBoxVal.Text = values[currentIdx];
             labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Bold);
@@ -52,14 +52,37 @@ namespace PGS_Profile
             buttonNext.Enabled = currentIdx == fields.Count() - 1 ? false : true;
         }
 
+
+
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            ChangeCurrent(true);
+            ChangeCurrent(currentIdx - 1);
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            ChangeCurrent();
+            ChangeCurrent(currentIdx + 1);
+        }
+
+
+        private void labelFN_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ChangeCurrent(0);
+        }
+
+        private void labelLN_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ChangeCurrent(1);
+        }
+
+        private void labelAd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ChangeCurrent(2);
+        }
+
+        private void labelPh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ChangeCurrent(3);
         }
     }
 }

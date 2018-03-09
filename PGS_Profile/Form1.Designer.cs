@@ -32,16 +32,16 @@
             this.checkBoxLN = new System.Windows.Forms.CheckBox();
             this.checkBoxAd = new System.Windows.Forms.CheckBox();
             this.checkBoxPh = new System.Windows.Forms.CheckBox();
-            this.labelFN = new System.Windows.Forms.Label();
-            this.labelLN = new System.Windows.Forms.Label();
-            this.labelAd = new System.Windows.Forms.Label();
-            this.labelPh = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxVal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.labelCurrent = new System.Windows.Forms.Label();
+            this.labelFN = new System.Windows.Forms.LinkLabel();
+            this.labelAd = new System.Windows.Forms.LinkLabel();
+            this.labelPh = new System.Windows.Forms.LinkLabel();
+            this.labelLN = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,42 +84,6 @@
             this.checkBoxPh.Size = new System.Drawing.Size(15, 14);
             this.checkBoxPh.TabIndex = 3;
             this.checkBoxPh.UseVisualStyleBackColor = true;
-            // 
-            // labelFN
-            // 
-            this.labelFN.AutoSize = true;
-            this.labelFN.Location = new System.Drawing.Point(35, 13);
-            this.labelFN.Name = "labelFN";
-            this.labelFN.Size = new System.Drawing.Size(55, 13);
-            this.labelFN.TabIndex = 4;
-            this.labelFN.Text = "First name";
-            // 
-            // labelLN
-            // 
-            this.labelLN.AutoSize = true;
-            this.labelLN.Location = new System.Drawing.Point(35, 36);
-            this.labelLN.Name = "labelLN";
-            this.labelLN.Size = new System.Drawing.Size(56, 13);
-            this.labelLN.TabIndex = 5;
-            this.labelLN.Text = "Last name";
-            // 
-            // labelAd
-            // 
-            this.labelAd.AutoSize = true;
-            this.labelAd.Location = new System.Drawing.Point(132, 13);
-            this.labelAd.Name = "labelAd";
-            this.labelAd.Size = new System.Drawing.Size(45, 13);
-            this.labelAd.TabIndex = 6;
-            this.labelAd.Text = "Address";
-            // 
-            // labelPh
-            // 
-            this.labelPh.AutoSize = true;
-            this.labelPh.Location = new System.Drawing.Point(132, 36);
-            this.labelPh.Name = "labelPh";
-            this.labelPh.Size = new System.Drawing.Size(38, 13);
-            this.labelPh.TabIndex = 7;
-            this.labelPh.Text = "Phone";
             // 
             // buttonBack
             // 
@@ -183,20 +147,64 @@
             this.labelCurrent.TabIndex = 13;
             this.labelCurrent.Text = "-none-";
             // 
+            // labelFN
+            // 
+            this.labelFN.AutoSize = true;
+            this.labelFN.Location = new System.Drawing.Point(36, 12);
+            this.labelFN.Name = "labelFN";
+            this.labelFN.Size = new System.Drawing.Size(55, 13);
+            this.labelFN.TabIndex = 14;
+            this.labelFN.TabStop = true;
+            this.labelFN.Text = "First name";
+            this.labelFN.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelFN_LinkClicked);
+            // 
+            // labelAd
+            // 
+            this.labelAd.AutoSize = true;
+            this.labelAd.Location = new System.Drawing.Point(132, 12);
+            this.labelAd.Name = "labelAd";
+            this.labelAd.Size = new System.Drawing.Size(45, 13);
+            this.labelAd.TabIndex = 15;
+            this.labelAd.TabStop = true;
+            this.labelAd.Text = "Address";
+            this.labelAd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelAd_LinkClicked);
+            // 
+            // labelPh
+            // 
+            this.labelPh.AutoSize = true;
+            this.labelPh.Location = new System.Drawing.Point(132, 35);
+            this.labelPh.Name = "labelPh";
+            this.labelPh.Size = new System.Drawing.Size(38, 13);
+            this.labelPh.TabIndex = 16;
+            this.labelPh.TabStop = true;
+            this.labelPh.Text = "Phone";
+            this.labelPh.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelPh_LinkClicked);
+            // 
+            // labelLN
+            // 
+            this.labelLN.AutoSize = true;
+            this.labelLN.Location = new System.Drawing.Point(36, 35);
+            this.labelLN.Name = "labelLN";
+            this.labelLN.Size = new System.Drawing.Size(56, 13);
+            this.labelLN.TabIndex = 17;
+            this.labelLN.TabStop = true;
+            this.labelLN.Text = "Last name";
+            this.labelLN.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelLN_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(189, 217);
+            this.Controls.Add(this.labelLN);
+            this.Controls.Add(this.labelPh);
+            this.Controls.Add(this.labelAd);
+            this.Controls.Add(this.labelFN);
             this.Controls.Add(this.labelCurrent);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxVal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.labelPh);
-            this.Controls.Add(this.labelAd);
-            this.Controls.Add(this.labelLN);
-            this.Controls.Add(this.labelFN);
             this.Controls.Add(this.checkBoxPh);
             this.Controls.Add(this.checkBoxAd);
             this.Controls.Add(this.checkBoxLN);
@@ -219,16 +227,16 @@
         private System.Windows.Forms.CheckBox checkBoxLN;
         private System.Windows.Forms.CheckBox checkBoxAd;
         private System.Windows.Forms.CheckBox checkBoxPh;
-        private System.Windows.Forms.Label labelFN;
-        private System.Windows.Forms.Label labelLN;
-        private System.Windows.Forms.Label labelAd;
-        private System.Windows.Forms.Label labelPh;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxVal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelCurrent;
+        private System.Windows.Forms.LinkLabel labelFN;
+        private System.Windows.Forms.LinkLabel labelAd;
+        private System.Windows.Forms.LinkLabel labelPh;
+        private System.Windows.Forms.LinkLabel labelLN;
     }
 }
 
