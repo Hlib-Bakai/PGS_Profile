@@ -34,15 +34,19 @@ namespace PGS_Profile
             buttonBack.Enabled = false;
             labelCurrent.Text = fields[currentIdx];
             textBoxVal.Text = values[currentIdx];
+            labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Bold);
         }
 
         private void ChangeCurrent(bool toBack = false)  //Default - change to next
         {
             values[currentIdx] = textBoxVal.Text;
+            checkers[currentIdx].Checked = (textBoxVal.Text != String.Empty);
+            labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Regular);
 
             currentIdx = toBack ? currentIdx - 1 : currentIdx + 1;
             labelCurrent.Text = fields[currentIdx];
             textBoxVal.Text = values[currentIdx];
+            labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Bold);
 
             buttonBack.Enabled = currentIdx == 0 ? false : true;
             buttonNext.Enabled = currentIdx == fields.Count() - 1 ? false : true;
