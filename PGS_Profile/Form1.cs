@@ -31,10 +31,7 @@ namespace PGS_Profile
             labels = new Label[] { labelFN, labelLN, labelAd, labelPh };
             checkers = new CheckBox[] { checkBoxFN, checkBoxLN, checkBoxAd, checkBoxPh };
 
-            buttonBack.Enabled = false;
-            labelCurrent.Text = fields[currentIdx];
-            textBoxVal.Text = values[currentIdx];
-            labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Bold);
+            ChangeCurrent(0);
         }
 
         private void ChangeCurrent(int newIdx) 
@@ -61,6 +58,8 @@ namespace PGS_Profile
                 buttonNext.Text = "Exit";
                 buttonNext.Click -= buttonNext_Click;
                 buttonNext.Click += buttonExit_Click;
+
+                buttonNext.Focus();
             }
             else
             {
@@ -68,6 +67,8 @@ namespace PGS_Profile
                 labelCurrent.Text = fields[currentIdx];
                 textBoxVal.Text = values[currentIdx];
                 labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Bold);
+
+                textBoxVal.Focus();
             }
         }
 
@@ -114,6 +115,12 @@ namespace PGS_Profile
         private void labelPh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ChangeCurrent(3);
+        }
+
+        private void textBoxVal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                ChangeCurrent(currentIdx + 1);
         }
     }
 }
