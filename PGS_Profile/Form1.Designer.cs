@@ -36,10 +36,10 @@
             this.labelLN = new System.Windows.Forms.Label();
             this.labelAd = new System.Windows.Forms.Label();
             this.labelPh = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonNext = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxVal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.labelCurrent = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -121,47 +121,49 @@
             this.labelPh.TabIndex = 7;
             this.labelPh.Text = "Phone";
             // 
-            // button1
+            // buttonBack
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 37);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Location = new System.Drawing.Point(0, 0);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(90, 37);
+            this.buttonBack.TabIndex = 8;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // button2
+            // buttonNext
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(99, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 37);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Next";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonNext.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonNext.FlatAppearance.BorderSize = 0;
+            this.buttonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNext.Location = new System.Drawing.Point(99, 0);
+            this.buttonNext.Name = "buttonNext";
+            this.buttonNext.Size = new System.Drawing.Size(90, 37);
+            this.buttonNext.TabIndex = 9;
+            this.buttonNext.Text = "Next";
+            this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.buttonBack);
+            this.panel1.Controls.Add(this.buttonNext);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 180);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(189, 37);
             this.panel1.TabIndex = 10;
             // 
-            // textBox1
+            // textBoxVal
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 154);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 20);
-            this.textBox1.TabIndex = 11;
+            this.textBoxVal.Location = new System.Drawing.Point(13, 154);
+            this.textBoxVal.Name = "textBoxVal";
+            this.textBoxVal.Size = new System.Drawing.Size(164, 20);
+            this.textBoxVal.TabIndex = 11;
             // 
             // label5
             // 
@@ -189,7 +191,7 @@
             this.ClientSize = new System.Drawing.Size(189, 217);
             this.Controls.Add(this.labelCurrent);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxVal);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelPh);
             this.Controls.Add(this.labelAd);
@@ -221,10 +223,10 @@
         private System.Windows.Forms.Label labelLN;
         private System.Windows.Forms.Label labelAd;
         private System.Windows.Forms.Label labelPh;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxVal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelCurrent;
     }
