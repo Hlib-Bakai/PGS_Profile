@@ -1,0 +1,10 @@
+D:\PROGRAMMING\VS_Workspace\PGS_Profile\PGS_Profile\bin\Debug\PGS_Profile.exe.config
+D:\PROGRAMMING\VS_Workspace\PGS_Profile\PGS_Profile\bin\Debug\PGS_Profile.exe
+D:\PROGRAMMING\VS_Workspace\PGS_Profile\PGS_Profile\bin\Debug\PGS_Profile.pdb
+D:\PROGRAMMING\VS_Workspace\PGS_Profile\PGS_Profile\obj\Debug\PGS_Profile.csprojResolveAssemblyReference.cache
+D:\PROGRAMMING\VS_Workspace\PGS_Profile\PGS_Profile\obj\Debug\PGS_Profile.Form1.resources
+D:\PROGRAMMING\VS_Workspace\PGS_Profile\PGS_Profile\obj\Debug\PGS_Profile.Properties.Resources.resources
+D:\PROGRAMMING\VS_Workspace\PGS_Profile\PGS_Profile\obj\Debug\PGS_Profile.csproj.GenerateResource.Cache
+D:\PROGRAMMING\VS_Workspace\PGS_Profile\PGS_Profile\obj\Debug\PGS_Profile.csproj.CoreCompileInputs.cache
+D:\PROGRAMMING\VS_Workspace\PGS_Profile\PGS_Profile\obj\Debug\PGS_Profile.exe
+D:\PROGRAMMING\VS_Workspace\PGS_Profile\PGS_Profile\obj\Debug\PGS_Profile.pdb
