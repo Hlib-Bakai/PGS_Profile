@@ -42,7 +42,11 @@
             this.labelAd = new System.Windows.Forms.LinkLabel();
             this.labelPh = new System.Windows.Forms.LinkLabel();
             this.labelLN = new System.Windows.Forms.LinkLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBoxFN
@@ -191,12 +195,43 @@
             this.labelLN.Text = "Last name";
             this.labelLN.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelLN_LinkClicked);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBoxResult);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(189, 180);
+            this.panel2.TabIndex = 18;
+            this.panel2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(65, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Thank you!";
+            // 
+            // textBoxResult
+            // 
+            this.textBoxResult.Location = new System.Drawing.Point(13, 30);
+            this.textBoxResult.Multiline = true;
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ReadOnly = true;
+            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxResult.Size = new System.Drawing.Size(164, 144);
+            this.textBoxResult.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(189, 217);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.labelLN);
             this.Controls.Add(this.labelPh);
             this.Controls.Add(this.labelAd);
@@ -216,6 +251,8 @@
             this.Text = "Profile";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,6 +274,9 @@
         private System.Windows.Forms.LinkLabel labelAd;
         private System.Windows.Forms.LinkLabel labelPh;
         private System.Windows.Forms.LinkLabel labelLN;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBoxResult;
+        private System.Windows.Forms.Label label1;
     }
 }
 

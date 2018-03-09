@@ -39,20 +39,38 @@ namespace PGS_Profile
 
         private void ChangeCurrent(int newIdx) 
         {
-            values[currentIdx] = textBoxVal.Text;
-            checkers[currentIdx].Checked = (textBoxVal.Text != String.Empty);
-            labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Regular);
+            if (currentIdx != fields.Count())
+            {
+                values[currentIdx] = textBoxVal.Text;
+                checkers[currentIdx].Checked = (textBoxVal.Text != String.Empty);
+                labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Regular);
+            }       
 
             currentIdx = newIdx;
-            labelCurrent.Text = fields[currentIdx];
-            textBoxVal.Text = values[currentIdx];
-            labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Bold);
 
             buttonBack.Enabled = currentIdx == 0 ? false : true;
-            buttonNext.Enabled = currentIdx == fields.Count() - 1 ? false : true;
+            buttonNext.Enabled = currentIdx == fields.Count() ? false : true;
+
+            panel2.Visible = currentIdx == fields.Count();
+            if (panel2.Visible)
+            {
+                fillResult();
+            }
+            else
+            {
+                labelCurrent.Text = fields[currentIdx];
+                textBoxVal.Text = values[currentIdx];
+                labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Bold);
+            }
         }
 
+        private void fillResult()
+        {
+            textBoxResult.Clear();
 
+            for (int i = 0; i < fields.Count(); i++)
+                textBoxResult.Text += String.Format("{0}: {1}" + Environment.NewLine, fields[i], values[i]);
+        }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
