@@ -39,25 +39,32 @@ namespace PGS_Profile
 
         private void ChangeCurrent(int newIdx) 
         {
-            if (currentIdx != fields.Count())
+            if (currentIdx != fields.Count())  //If was not a result page
             {
                 values[currentIdx] = textBoxVal.Text;
                 checkers[currentIdx].Checked = (textBoxVal.Text != String.Empty);
                 labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Regular);
-            }       
+            } else //If was a result page
+            {
+                buttonNext.Click -= buttonExit_Click;
+                buttonNext.Click += buttonNext_Click;
+            }
 
             currentIdx = newIdx;
 
             buttonBack.Enabled = currentIdx == 0 ? false : true;
-            buttonNext.Enabled = currentIdx == fields.Count() ? false : true;
 
             panel2.Visible = currentIdx == fields.Count();
             if (panel2.Visible)
             {
                 fillResult();
+                buttonNext.Text = "Exit";
+                buttonNext.Click -= buttonNext_Click;
+                buttonNext.Click += buttonExit_Click;
             }
             else
             {
+                buttonNext.Text = "Next";
                 labelCurrent.Text = fields[currentIdx];
                 textBoxVal.Text = values[currentIdx];
                 labels[currentIdx].Font = new Font(labels[currentIdx].Font, FontStyle.Bold);
@@ -75,6 +82,12 @@ namespace PGS_Profile
         private void buttonBack_Click(object sender, EventArgs e)
         {
             ChangeCurrent(currentIdx - 1);
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Proceed with exit?", "Confirmation", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                Application.Exit();
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
