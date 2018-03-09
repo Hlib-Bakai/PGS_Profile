@@ -121,14 +121,14 @@
             this.panel1.Controls.Add(this.buttonBack);
             this.panel1.Controls.Add(this.buttonNext);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 180);
+            this.panel1.Location = new System.Drawing.Point(0, 157);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(189, 37);
             this.panel1.TabIndex = 10;
             // 
             // textBoxVal
             // 
-            this.textBoxVal.Location = new System.Drawing.Point(13, 154);
+            this.textBoxVal.Location = new System.Drawing.Point(13, 129);
             this.textBoxVal.Name = "textBoxVal";
             this.textBoxVal.Size = new System.Drawing.Size(164, 20);
             this.textBoxVal.TabIndex = 11;
@@ -137,7 +137,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 135);
+            this.label5.Location = new System.Drawing.Point(13, 110);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 13);
             this.label5.TabIndex = 12;
@@ -146,7 +146,7 @@
             // labelCurrent
             // 
             this.labelCurrent.AutoSize = true;
-            this.labelCurrent.Location = new System.Drawing.Point(114, 135);
+            this.labelCurrent.Location = new System.Drawing.Point(114, 110);
             this.labelCurrent.Name = "labelCurrent";
             this.labelCurrent.Size = new System.Drawing.Size(37, 13);
             this.labelCurrent.TabIndex = 13;
@@ -203,7 +203,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(189, 180);
+            this.panel2.Size = new System.Drawing.Size(189, 157);
             this.panel2.TabIndex = 18;
             this.panel2.Visible = false;
             // 
@@ -223,7 +223,7 @@
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ReadOnly = true;
             this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxResult.Size = new System.Drawing.Size(164, 144);
+            this.textBoxResult.Size = new System.Drawing.Size(164, 119);
             this.textBoxResult.TabIndex = 1;
             // 
             // Form1
@@ -231,7 +231,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(189, 217);
+            this.ClientSize = new System.Drawing.Size(189, 194);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.labelLN);
             this.Controls.Add(this.labelPh);
@@ -245,6 +245,7 @@
             this.Controls.Add(this.checkBoxAd);
             this.Controls.Add(this.checkBoxLN);
             this.Controls.Add(this.checkBoxFN);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
